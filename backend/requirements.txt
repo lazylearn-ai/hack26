@@ -6,4 +6,4 @@ pyalex
 PyPDF2
 google
 googlesearch-python
-bs4
+beautifulsoup4
