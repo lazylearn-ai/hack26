@@ -34,6 +34,7 @@ def generate_plan(planFormInfo: PlanFormInfo):
 @report_router.post('/sources')
 def generate_sources(sourceFormInfo: SourceFormInfo):
     try:
+        print("start collecting cources..")
         sources = get_sources(theme=sourceFormInfo.theme)
         return {
             "sources": sources
