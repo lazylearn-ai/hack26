@@ -33,11 +33,13 @@ def generate_plan(planFormInfo: PlanFormInfo):
 
 @report_router.post('/sources')
 def generate_sources(sourceFormInfo: SourceFormInfo):
-    sources = get_sources(theme=sourceFormInfo.theme)
-    return {
-        "sources": sources
-    }
-
+    try:
+        sources = get_sources(theme=sourceFormInfo.theme)
+        return {
+            "sources": sources
+        }
+    except Exception as e:
+        print(str(e))
 
 @report_router.post('/generate')
 def generate_report(reportFormInfo: ReportFormInfo):
