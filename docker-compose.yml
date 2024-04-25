@@ -1,0 +1,30 @@
+version: "2.15"
+services:
+  app:
+    build:
+      context: /backend
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    container_name: "fastapi_app"
+    command: ["/fastapi_app/docker/app.sh"]
+    ports:
+      - "8000:8000"
+    networks:
+      - custom
+
+  frontend:
+    build:
+      context: /backend
+      dockerfile: Dockerfile
+    container_name: "react_app"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - app
+    networks:
+      - custom
+
+networks:
+  custom:
+    driver: bridge

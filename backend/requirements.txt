@@ -1,0 +1,8 @@
+fastapi[all]
+gigachain
+gunicorn
+python-dotenv
+pyalex
+PyPDF2
+google
+bs4
