@@ -122,7 +122,7 @@ def get_sources_alex(theme):
     return articles
 
 def get_sources(theme):
-    return get_sources_google(theme) #+ get_sources_google(theme)
+    return get_sources_google(theme) + get_sources_google(theme)
 
 
 def get_relevance(theme):
