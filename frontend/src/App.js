@@ -98,7 +98,7 @@ function App() {
 
       const response = await axios({
         method: "post",
-        url: 'http://95.163.228.81:8000/report/aims', 
+        url: 'http://localhost:8000/report/aims', 
         data: JSON.stringify(aimFormInfo),
         headers: {
           'Accept': 'application/json',
@@ -125,7 +125,7 @@ function App() {
     try {
       const response = await axios({
         method: "post",
-        url: 'http://95.163.228.81:8000/report/tasks', 
+        url: 'http://localhost:8000/report/tasks', 
         data: JSON.stringify(taskFormInfo),
         headers: {
           'Accept': 'application/json',
@@ -150,7 +150,7 @@ function App() {
     try {
       const response = await axios({
         method: "post",
-        url: 'http://95.163.228.81:8000/report/plan', 
+        url: 'http://localhost:8000/report/plan', 
         data: JSON.stringify(planFormInfo),
         headers: {
           'Accept': 'application/json',
@@ -174,7 +174,7 @@ function App() {
 
       const response = await axios({
         method: "post",
-        url: 'http://95.163.228.81:8000/report/sources', 
+        url: 'http://localhost:8000/report/sources', 
         data: JSON.stringify(sourceFormInfo),
         headers: {
           'Accept': 'application/json',
@@ -206,7 +206,7 @@ function App() {
     try {
       const response = await axios({
         method: "post",
-        url: 'http://95.163.228.81:8000/report/generate', 
+        url: 'http://localhost:8000/report/generate', 
         data: JSON.stringify(reportFormInfo),
         headers: {
           'Accept': 'application/json',

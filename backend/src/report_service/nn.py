@@ -87,7 +87,6 @@ def get_sources_google(theme):
     urls = []
     for i in search(theme, tld="co.in", num=10, stop=10, pause=2):
         urls.append(i) 
-    print(str(urls))
     articles = [] 
     for url in urls:
         try:
@@ -108,7 +107,6 @@ def get_sources_google(theme):
 def get_sources_alex(theme):
     print("scan alex..")
     urls = [work["primary_location"]["pdf_url"] for work in Works().search(theme).get()[:2]]
-    print(str(urls))
     articles = []
     for url in urls:
         if url != None:
