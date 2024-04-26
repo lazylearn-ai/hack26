@@ -10,8 +10,6 @@ services:
     command: ["/fastapi_app/docker/app.sh"]
     ports:
       - "8000:8000"
-    networks:
-      - custom
 
   frontend:
     build:
@@ -22,9 +20,3 @@ services:
       - "3000:3000"
     depends_on:
       - app
-    networks:
-      - custom
-
-networks:
-  custom:
-    driver: bridge
